@@ -11,3 +11,11 @@ body{
     font-family: 'Roboto', sans-serif;
     color: white;
 }
+a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    margin: 1rem;
+    padding: .3rem 1rem .3rem 1rem;
+    border-radius: 1rem
+}
