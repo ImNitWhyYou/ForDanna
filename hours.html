@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/plasticine/2x/ffffff/clock.png" type="image/x-icon">
+    <link rel="stylesheet" href="styleHours.css">
+</head>
+
+<body>
+    <div class="container">
+        <p></p>
+        <p id="teQuiero"></p>
+        <img src="teQ.jpeg" width="250" height="auto">
+        <p id="beso"></p>
+        <p id="novios"></p>
+        <p>Ꝏ horas restantes de nuestro amor.</p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let obtenerHoras = (fecha) => {
+        return Math.round(((new Date().getTime()) - (new Date(fecha).getTime()))/(1000*60*60))
+    }
+
+    let fechaTeQuiero = obtenerHoras('2020-11-10 09:07:23')
+    let fechaBeso = obtenerHoras('2021-01-23 18:23:00')
+    let fechaNovios = obtenerHoras('2021-04-29 21:10:00')
+
+    let pTeQuiero = document.getElementById('teQuiero')
+    let pBeso = document.getElementById('beso')
+    let pNovios = document.getElementById('novios')
+
+    pTeQuiero.innerText = fechaTeQuiero + " horas desde el primer te quiero."
+    pBeso.innerText = fechaBeso + " horas desde el primer beso."
+    pNovios.innerText = fechaNovios + " horas siendo novios."
+</script>
